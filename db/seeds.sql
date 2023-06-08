@@ -11,7 +11,7 @@ VALUES
 (9, 'Customer Service'),
 (10, 'Production');
 
-INSERT INTO roles (id, title, salary, department_id)
+INSERT INTO role (id, title, salary, department_id)
 VALUES
 (1, 'Sales Lead', 100000, 1),
 (2, 'Marketing Manager', 80000, 2),
@@ -27,12 +27,12 @@ VALUES
 INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
 VALUES
 (1, 'John', 'Doe', 1, NULL),
-(2, 'Jane', 'Moe', NULL),
-(3, 'Jack', 'Toe', NULL),
-(4, 'Jill', 'Joe', NULL),
-(5, 'James', 'Noe', NULL),
-(6, 'Jenny', 'Poe', NULL),
-(7, 'Jared', 'Roe', NULL),
-(8, 'Jasmine', 'Coe',NULL),
-(9, 'Jared', 'Woe', NULL),
-(10, 'Jenna', 'Foe', NULL);
+(2, 'Jane', 'Moe', 2, NULL),
+(3, 'Jack', 'Toe', 3, 1),
+(4, 'Jill', 'Joe', 4, NULL),
+(5, 'James', 'Noe', 5, NULL),
+(6, 'Jenny', 'Poe', 6, NULL),
+(7, 'Jared', 'Roe', 7, NULL),
+(8, 'Jasmine', 'Coe', 8, NULL),
+(9, 'Jared', 'Woe', 9, NULL),
+(10, 'Jenna', 'Foe', 10, NULL);
