@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS employee_db; 
-CREATE DATABASE employee_db;
-USE employee_db;
+DROP DATABASE IF EXISTS employee_tracker; 
+CREATE DATABASE employee_tracker;
+USE employee_tracker;
 -- if the database exists, drop it and create a new one
 
 CREATE TABLE department (
