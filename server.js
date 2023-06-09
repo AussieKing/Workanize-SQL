@@ -102,6 +102,8 @@ function start() {
     });
 }
 
+//! *************** Start of all the CRUD functions *****************
+
 //! function to view all Employees
 function viewAllEmployees() {
   const query = `SELECT employee.id,
