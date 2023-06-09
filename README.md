@@ -21,7 +21,7 @@ Workanize SQL is a data base tracker of fictional employees, whose names starts 
 2. Install the following: 
 - Inquirer.js: [Version 8.2.4](https://www.npmjs.com/package/inquirer/v/8.2.4)
 - MySQL2: [Version 3.3.3](https://www.npmjs.com/package/mysql2)
-- Express.js [Version 4.17.1](https://expressjs.com/)
+- Express.js: [Version 4.17.1](https://expressjs.com/)
 3. Open the repository in your favorite source code editor. (I use [VS Code](https://code.visualstudio.com/)).
 4. Open the integrated terminal for the document and complete the installation as provided in the walkthrough video, or in the below instructions.
 5.  (npm install -> myslq -u root -p in schema.sql, source schema.sql  -> source seeds.sql -> exit -> node server.js in server.js)
@@ -40,7 +40,7 @@ Workanize SQL is a data base tracker of fictional employees, whose names starts 
 ### Repository Link:
 [Repository Link](https://github.com/AussieKing/Workanize-SQL)
 
-### YouTube Walkthrough Video:
+### Walkthrough Video:
 [Click Here to Watch.](https://drive.google.com/file/d/1NdbDG9-U93d8gOLwVWm6_kwpM_o6XywE/view)
 
 ### Screenshots.
