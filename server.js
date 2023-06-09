@@ -9,6 +9,13 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+// //! TESTING : to seed database
+// const seedDatabase = fs.readFileSync('./db/schema.sql', 'utf8');
+// connection.query(seedDatabase, (err, res) => {
+//     if (err) throw err;
+//     console.log('Database seeded successfully.');
+// });
+
 // Connect to database
 const db = mysql.createConnection({
     host: 'localhost',
@@ -42,37 +49,37 @@ function start() {
     })
     .then(answer => {
         switch (answer.action) {
-            case 'View All Employees':  //! CREATED
+            case 'View All Employees':  
                 viewAllEmployees();
                 break;
-            case 'Add Employee':    //! CREATED
+            case 'Add Employee':    
                 addEmployee();
                 break;
-            case 'Update Employee Role': //! CREATED
+            case 'Update Employee Role': 
                 updateEmployeeRole();
                 break;
-            case 'View All Roles': //! CREATED
+            case 'View All Roles': 
                 viewAllRoles();
                 break;
-            case 'Add Role': //! CREATED
+            case 'Add Role': 
                 addRole();
                 break;
-            case 'View All Departments': //! CREATED
+            case 'View All Departments': 
                 viewAllDepartments();
                 break;
-            case 'Add Department': //! CREATED
+            case 'Add Department': 
                 addDepartment();
                 break;
-            case 'Update Employee Manager': //! CREATED
+            case 'Update Employee Manager': //! NOT WORKING
                 updateEmployeeManager();
                 break;
-            case 'View Employee By Manager': //! CREATED
+            case 'View Employee By Manager': //! NOT WORKING
                 viewEmployeeByManager();
                 break;
-            case 'View Employee By Department': //! CREATED
+            case 'View Employee By Department': //! NOT WORKING
                 viewEmployeeByDepartment();
                 break;
-            case 'Delete Employee / Role / Department': //! CREATED
+            case 'Delete Employee / Role / Department': //! NOT WORKING
                 deleteEmployeeRoleDepartment();
                 break;
             case 'Quit':
@@ -88,6 +95,7 @@ function start() {
 //! ******* Start of all the CRUD functions ********
 
 //! function to view all Employees
+//! function to view all Employees
 function viewAllEmployees() {
     const query =
     `SELECT employee.id, 
@@ -96,10 +104,10 @@ function viewAllEmployees() {
     role.title, 
     department.name AS department, 
     role.salary, 
-    CONCAT(manager.first_name, ' ', manager.last_name) AS manager,
-    FROM employee,
-    LEFT JOIN role ON employee.role_id = role.id,
-    LEFT JOIN department ON role.department_id = department.id,
+    CONCAT(manager.first_name, ' ', manager.last_name) AS manager
+    FROM employee
+    LEFT JOIN role ON employee.role_id = role.id
+    LEFT JOIN department ON role.department_id = department.id
     LEFT JOIN employee manager ON manager.id = employee.manager_id
     ORDER BY employee.id ASC;`;
 
@@ -214,12 +222,13 @@ function updateEmployeeRole() {
 }
 
 //! function to view all roles
+//! function to view all roles
 function viewAllRoles() {
     const query =
     `SELECT role.id AS Id,
     role.title AS Title, 
     department.name AS Department, 
-    role.salary AS Salary,
+    role.salary AS Salary
     FROM role
     LEFT JOIN department ON role.department_id = department.id
     ORDER BY role.id ASC;`;
@@ -307,7 +316,7 @@ function addDepartment() {
 }
 
 //! function to view all employees by department
-function viewAllEmployeesByDepartment() {
+function viewEmployeeByDepartment() {
     const query =
     `SELECT employee.id AS Id,
     employee.first_name AS 'First Name',
@@ -326,7 +335,7 @@ function viewAllEmployeesByDepartment() {
 }
 
 //! function to view all employees by manager
-function viewAllEmployeesByManager() {
+function viewEmployeeByManager() {
     const query =
     `SELECT employee.id AS Id,
     employee.first_name AS 'First Name',
