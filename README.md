@@ -29,10 +29,10 @@ Workanize SQL is a data base tracker of fictional employees, whose names starts 
 
 ## Usage Instructions
 1. Open the content management systems (CMS) named "Workanize SQL".
-2. Enter npm install to install all packages.
-3. Enter myslq -u root -p from the db folder in the integrated folder, type in your password and username as per your preferred .env, and log in mySQL.
-4. Once connected to mySQL, type myslq -u root -p from the schema.sql terminal, enter password, and type source schema.sql (to create the schema database) followed by source seeds.sql (to seed the database). Then, type exit.
-6. Open 'Intergrated Terminal' on 'server.js' and enter 'node server.js'
+2. Enter <npm install> to install all packages.
+3. Enter <myslq -u root -p> from the db folder in the integrated folder, type in your password and username as per your preferred .env, and log in mySQL.
+4. Once connected to mySQL, type <myslq -u root -p> from the schema.sql terminal, enter password, and type <source schema.sql> (to create the schema database) followed by <source seeds.sql> (to seed the database). Then, type <exit>.
+6. Open 'Intergrated Terminal' on 'server.js' and enter <node server.js>.
 7. Use the 'UP' and 'DOWN' arrow keys to navigate the command line. 
 8. Click 'enter' or 'return' on your respective choice to select.
 9. Follow all commad line prompts as directed until desired choice has been met.
@@ -47,6 +47,14 @@ Workanize SQL is a data base tracker of fictional employees, whose names starts 
 ### Figure 1. Command line interface
 
 ![Screen Shot 2023-06-09 at 8 41 44 pm](https://github.com/AussieKing/Workanize-SQL/assets/126050763/4647d01e-ba02-469d-a1e7-2b426ec233ae)
+ 
+### Figure 2. Tables
+  
+![Screen Shot 2023-06-09 at 8 52 02 pm](https://github.com/AussieKing/Workanize-SQL/assets/126050763/28c512cf-57e4-4b49-9cc5-19e09dce791e)
+  
+### Figure 3. Confirmations of command
+  
+![Screen Shot 2023-06-09 at 8 55 17 pm](https://github.com/AussieKing/Workanize-SQL/assets/126050763/e2d5945b-9dfa-46cd-8022-aaba1f1f080c)
 
 
 ## Technologies used
